@@ -29,44 +29,49 @@ Discover relevant research papers using semantic search, generate concise summar
 - NumPy
 - PyMuPDF
 
-#Project Structure
-- PaperLens/
+## 📂 Project Structure
+
+```text
+PaperLens/
 │
-├── app.py
-├── recommendation.py
-├── recommendation_fallback.py
-├── requirements.txt
+├── app.py                         # Streamlit application
+├── recommendation.py              # Semantic search and AI pipeline
+├── recommendation_fallback.py     # Backup recommendation module
+├── requirements.txt               # Project dependencies
 ├── README.md
 ├── LICENSE
 │
-├── paper_embeddings.npy
-├── paper_faiss.index
+├── paper_embeddings.npy           # Precomputed sentence embeddings
+├── paper_faiss.index              # FAISS vector index
+├── profile_cache.json             # Cached AI-generated paper profiles
 │
-├── profile_cache.json
-│
-└── assets/
+└── assets/                        # Screenshots and demo images
+```
 
-#Workflow
-User Query / PDF
-        │
-        ▼
-Sentence Transformer
-        │
-        ▼
-FAISS Semantic Search
-        │
-        ▼
-Top Relevant Papers
-        │
-        ├──► BART Summarizer
-        ├──► KeyBERT
-        └──► Groq LLM
-                    │
-                    ▼
-      Structured AI Insights
-                    │
-                    ▼
-        Streamlit Dashboard
+## ⚙️ Workflow
+
+```text
+                User Query / PDF
+                        │
+                        ▼
+         Sentence Transformer Embedding
+                        │
+                        ▼
+            FAISS Semantic Search
+                        │
+                        ▼
+          Top Relevant Research Papers
+                        │
+        ┌───────────────┼────────────────┐
+        ▼               ▼                ▼
+ BART Summarizer   KeyBERT        Groq LLM
+                        │
+                        ▼
+      Structured Research Paper Insights
+                        │
+                        ▼
+          Interactive Streamlit Dashboard
+```
 
 ## ⚙️ Installation
 
