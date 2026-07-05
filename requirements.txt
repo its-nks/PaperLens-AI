@@ -1,0 +1,15 @@
+streamlit
+pandas
+numpy
+datasets
+sentence-transformers
+transformers
+torch
+faiss-cpu
+scikit-learn
+keybert
+groq
+accelerate
+sentencepiece
+protobuf
+pymupdf
